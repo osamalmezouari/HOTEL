@@ -45,28 +45,30 @@ input[type=checkbox]{
 .pageone>.container>.header>.nav>ul>li>a{
     display: block;
     color: white;
-    width: 120px;
     text-align: center;
-    padding: 5px;
+    padding: 0px  15px 0px 15px;
     line-height: 20px;
     text-transform: capitalize;
+    background-color: rgba(217, 217, 217, 0.08);
+    border-radius: 10px;
+    font-weight: 600;
+    height: 30px;
+    line-height: 28px;
 
 }
-
+.pageone>.container>.header>.nav>ul>li:nth-child(1)>a{
+    border: solid 2px transparent;
+}   
 .pageone>.container>.header>.nav>ul>li:nth-child(2)>a{
-    border: solid 2px white;
-    border-radius: 15px;
+    border: solid 2px transparent;
     width: 120px;
+    background-color: #fec007;
+    color: #1E1E1E;
 }
-.pageone>.container>.header>.nav>ul>li:nth-child(3)>a{
-    width: 60px;
-    font-size: 25px;
-}
-.pageone>.container>.header>.nav>ul>li>a:hover{
-    color: #fec107;
-}
-.pageone>.container>.header>.nav>ul>li:nth-child(2)>a:hover{
-    border: solid 2px #fec107;
+
+.pageone>.container>.header>.nav>ul>li:nth-child(1)>a:hover
+,.pageone>.container>.header>.nav>ul>li:nth-child(2)>a:hover{
+    border: solid 2px white;
 }
 @media (max-width:600px){
     
@@ -77,25 +79,33 @@ input[type=checkbox]{
     max-width: 75%;
     margin: auto;
     margin-top: 40px;
-    height: 60px;
-    background-color: #fec107;
+    height: 40px;
+    background-color: #1E1E1E;
     border: 0px solid transparent;
-    border-radius: 10px;
-    outline: 5px solid #fbbc0085;
+    border-radius: 5px;
+    outline: 0.5px solid #eeeeee6a;
     padding-left: 10px;
     align-items: center;
     column-gap: 50px;
     justify-content: center;
+    color: white;
 }
 .pageone>.container>.searchbar>div{
     display: flex;
     justify-content: space-around;
     align-items: center;
     column-gap: 10px;
-    border-left: 1px solid #1E1E1E;
+    outline: solid transparent 2px; 
+    border-radius: 5px;
     height: 30px;
-    padding-left: 10px;
-    width: 27%;
+    padding: 10px;
+    width: 35%;
+    cursor: pointer;
+}
+.pageone>.container>.searchbar>div:hover{
+    background-color: #fbbc000e;
+    outline: #FEC107 solid 2px; 
+
 }
 .pageone>.container>.searchbar>div>h3{
     font-size: 12px;
@@ -105,29 +115,30 @@ input[type=checkbox]{
     border-left: 0px solid #1E1E1E;
 }
 .pageone>.container>.searchbar>.three{
-   width: 40%;
+   width:50%;
 }
 .pageone>.container>.searchbar>div>i{
     font-size: 25px;
+    color: #FEC107;
 }
 #right{
     font-size: 15px;
     margin-left: 5px;
 }
 .pageone>.container>.searchbar>div:nth-child(4){
-    background-color: #1E1E1E;
+    background-color: #FEC107;
     width:80px;
     border: 0px solid transparent;
-    border-radius: 10px;
-    padding-left: 0px;
-    height:60px;
+    border-radius: 5px;
+    padding: 0px;
+    height:40px;
     cursor: pointer;
-    
 }
 .pageone>.container>.searchbar>div:nth-child(4)>i{
     color: #fec107;
-    font-size: 30px;
+    font-size: 25px;
     margin: auto;
+    color: #1E1E1E;
 }
 @media (max-width:850px) {
     .pageone>.container>.searchbar{
@@ -320,9 +331,8 @@ input[type=range] {
 }
 .pageone>.container>.contenu>.sidebar>.two>div{
     display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;
+    column-gap: 20px;    
 }
 .pageone>.container>.contenu>.sidebar>.two>div>p{
     margin-bottom: 0px;
@@ -340,7 +350,8 @@ input[type=range] {
 
 .pageone>.container>.contenu>.section{
     display: grid;
-    grid-template-rows: 100px 100px 60px ;
+    grid-template-rows: 100px 100px 60px repeat(5,260px) ;
+    height: max-content;
 }
 .pageone>.container>.contenu>.section>.hberg{
     width: 100%;
@@ -359,8 +370,8 @@ input[type=range] {
 
 }
 .pageone>.container>.contenu>.section>.hberg>select{
-    background-color: #fec00768;
-    width: 55%;
+    background-color: #fec00723;
+    width: 40%;
     height: 50px;
     outline: none;
     border: 1px solid #eeeeee6a ;
@@ -372,7 +383,7 @@ input[type=range] {
     
 }
 .pageone>.container>.contenu>.section>.hberg>select:focus{
-    background-color:#FEC107;
+    background-color:#fec007;
 }
 .pageone>.container>.contenu>.section>.cart{
     background-image: url(../images/map.png);
@@ -430,4 +441,128 @@ input[type=range] {
 .pageone>.container>.contenu>.section>.filt>div:hover>i{
     color: #FEC107;
     cursor: pointer;
+}
+
+.pageone>.container>.contenu>.section>#results{
+    width: 100%;
+    border: solid 1px #eeeeee6a;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
+    color: white;    
+    position: relative;
+}
+
+
+.pageone>.container>.contenu>.section>.result-one>div:nth-child(1){
+    background-image: url(../images/marrakech-htel.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.pageone>.container>.contenu>.section>.result-two>div:nth-child(1){
+    background-image: url(../images/ibn-hdo-kasba.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.pageone>.container>.contenu>.section>.result-three>div:nth-child(1){
+    background-image: url(../images/hotel-elsalam.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.pageone>.container>.contenu>.section>.result-four>div:nth-child(1){
+    background-image: url(../images/etalj-hotel.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pageone>.container>.contenu>.section>#results>div:nth-child(1){
+    width: 300px;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(2){
+    display: grid;
+    padding: 10px 0px 10px 0px;
+    grid-template-rows: repeat(4,40px) 1fr;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(2)>p{
+    font-weight:200;
+    color: #eeeeee6a;
+    margin-bottom: 0px;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(2)>h4{
+    margin-bottom: 0px;
+    height: max-content;
+    font-size:25px;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(2)>div:nth-child(3){
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(2)>div:nth-child(3)>p{
+    font-weight: 200;
+    font-size: 12px;
+    background-color: #FF1234;
+    width: max-content;
+    text-align: center;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    height: max-content;
+    padding: 3px;
+    margin-bottom: 0px;
+
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(2)>div:nth-child(4){
+    display: flex;
+    column-gap: 10px;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(2)>div:nth-child(4)>a{
+    display: block;
+    color: white;
+    text-decoration:underline !important;
+    font-size: 12px;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(2)>h6:nth-child(5){
+    display: flex;
+    align-items: flex-end;
+    font-size: 12px;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(3){
+    position: absolute;
+    right: 15px;
+    padding-top: 50px;
+    text-align: end;
+    width: 30%;
+
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(3)>h2{
+    font-weight: 600;
+    font-size: 25px;
+    color: #fec007;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(3)>p{
+    font-weight: 200;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ffffffaf;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(3)>h6{
+    color: #ffffffaf;
+    margin-bottom: 40px;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(3)>div{
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    background-color: #FEC107;
+    outline: solid 5px #fec00750;
+    width: 120px;
+    padding: 5px;
+    border-radius: 5px;
+    color:black;
+}
+.pageone>.container>.contenu>.section>#results>div:nth-child(3)>div>p{
+    margin: 0px;
+
 }
